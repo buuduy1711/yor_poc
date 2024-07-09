@@ -53,7 +53,9 @@ resource azurerm_app_service "app-service2" {
     enabled = false
   }
   tags = {
-    purpose = "Poc Demo"
+    purpose   = "Poc Demo"
+    yor_name  = "app-service2"
+    yor_trace = "c1c1eebd-5846-4cbe-852c-6fffa72016c7"
   }
 }
 

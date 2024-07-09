@@ -4,7 +4,9 @@ resource "azurerm_virtual_network" "example" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   tags = {
-    purpose = "demo"
+    purpose   = "demo"
+    yor_name  = "example"
+    yor_trace = "abe37fef-16db-4722-af4a-aa3842ac76bb"
   }
 }
 
@@ -107,12 +109,14 @@ resource azurerm_network_watcher "network_watcher" {
   name                = "terragoat-network-watcher-${var.environment}"
   resource_group_name = azurerm_resource_group.example.name
   tags = {
-    purpose = "Poc Demo"
+    purpose   = "Poc Demo"
+    yor_name  = "network_watcher"
+    yor_trace = "e59df150-3152-408d-81a0-8e86a77687d2"
   }
 }
 
 resource azurerm_network_watcher_flow_log "flow_log" {
-  name = "terragoat-network-watcher-flow-log-${var.environment}"
+  name                      = "terragoat-network-watcher-flow-log-${var.environment}"
   enabled                   = false
   network_security_group_id = azurerm_network_security_group.bad_sg.id
   network_watcher_name      = azurerm_network_watcher.network_watcher.name

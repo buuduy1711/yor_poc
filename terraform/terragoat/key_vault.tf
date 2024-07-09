@@ -17,6 +17,9 @@ resource "azurerm_key_vault" "example" {
   }
   tags = merge({
     purpose = "Poc Demo"
+    }, {
+    yor_name  = "example"
+    yor_trace = "25491588-c423-4971-8f7a-82fc0e8c9ea8"
   })
 }
 

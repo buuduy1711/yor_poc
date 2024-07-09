@@ -6,7 +6,9 @@ resource "azurerm_storage_account" "security_storage_account" {
   account_replication_type  = "LRS"
   enable_https_traffic_only = true
   tags = {
-    purpose = "Security"
+    purpose   = "Security"
+    yor_name  = "security_storage_account"
+    yor_trace = "55c69b30-d43d-450d-8400-33123d192da3"
   }
 }
 

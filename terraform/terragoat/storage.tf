@@ -9,7 +9,9 @@ resource "azurerm_managed_disk" "example" {
     enabled = false
   }
   tags = {
-    purpose = "demo"
+    purpose   = "demo"
+    yor_name  = "example"
+    yor_trace = "71f2a0cf-af94-4f62-b4b7-8e95520874cd"
   }
 }
 
@@ -41,7 +43,9 @@ resource "azurerm_storage_account" "example" {
     }
   }
   tags = {
-    purpose = "demo"
+    purpose   = "demo"
+    yor_name  = "example"
+    yor_trace = "da98fc36-7a8d-47bf-926c-0307422bea23"
   }
 }
 

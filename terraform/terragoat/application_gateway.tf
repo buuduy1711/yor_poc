@@ -54,6 +54,8 @@ resource "azurerm_application_gateway" "network" {
     backend_http_settings_name = local.http_setting_name
   }
   tags = {
-    purpose = "Poc Demo"
+    purpose   = "Poc Demo"
+    yor_name  = "network"
+    yor_trace = "f99a0e1a-9e25-410b-babb-5001f7fc2fc9"
   }
 }

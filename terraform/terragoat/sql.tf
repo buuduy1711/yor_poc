@@ -14,7 +14,10 @@ resource "azurerm_sql_server" "example" {
   administrator_login          = "ariel"
   administrator_login_password = "Aa12345678"
   tags = merge({
-    purpose = "demo"})
+    purpose   = "demo" }, {
+    yor_name  = "example"
+    yor_trace = "cecfc7f1-bad8-471e-84f7-e48e4d04899a"
+  })
 }
 
 resource "azurerm_mssql_server_security_alert_policy" "example" {

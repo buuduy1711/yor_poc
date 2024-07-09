@@ -12,6 +12,8 @@ resource azurerm_kubernetes_cluster "k8s_cluster" {
     node_count = 2
   }
   tags = {
-    purpose = "Poc Demo"
+    purpose   = "Poc Demo"
+    yor_name  = "k8s_cluster"
+    yor_trace = "e899ad3b-d651-4da6-856d-d6b8a4a89529"
   }
 }
