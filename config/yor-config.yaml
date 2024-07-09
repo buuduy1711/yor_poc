@@ -5,6 +5,17 @@ tag_groups:
     value:
         default: demo
     filters:
-    - name: env
-      value: demo
+      tags:
+        git_repo: yor_poc
+      directory: /terraform/demo
+- name: team
+  tags:
+  - name: team
+    value:
+        default: devops
+    filters:
+      tags:
+        git_repo: yor_poc
+      directory: /terraform/yor
+
 -
