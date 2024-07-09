@@ -13,3 +13,16 @@ variable "environment" {
   default     = "demo"
   description = "Must be all lowercase letters or numbers"
 }
+
+variable "tenant_id" {
+  type        = string
+  description = "The tenant ID to be scanned"
+  default     = ""
+  
+}
+
+variable "object_id" {
+  type        = string
+  description = "The object ID to be scanned"
+  default     = ""
+}

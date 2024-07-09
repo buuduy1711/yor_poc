@@ -5,9 +5,6 @@ resource "azurerm_managed_disk" "example" {
   storage_account_type = "Standard_LRS"
   create_option        = "Empty"
   disk_size_gb         = 1
-  encryption_settings {
-    enabled = false
-  }
   tags = {
     purpose   = "demo"
     yor_name  = "example"

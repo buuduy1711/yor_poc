@@ -1,12 +1,10 @@
-resource azurerm_app_service_plan "example" {
+resource azurerm_service_plan "example" {
   name                = "terragoat-app-service-plan-${var.environment}"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  sku {
-    tier = "Dynamic"
-    size = "S1"
-  }
+  sku_name = "S2"
+  os_type             = "Windows"
   tags = {
     git_commit           = "898d5beaec7ffdef6df0d7abecff407362e2a74e"
     git_file             = "terraform/azure/app_service.tf"
